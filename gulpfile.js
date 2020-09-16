@@ -6,7 +6,6 @@ const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 const uglify = require('gulp-uglify');
 
-
 //编译、合并、压缩less文件
 const buildLess = (cb) => {
   return src(['src/less/**/*.less'])
@@ -17,7 +16,6 @@ const buildLess = (cb) => {
     .pipe(dest('src/css'))
 }
 
-
 //合并压缩后的css文件
 const buildCss = (cb) => {
   return src(['src/css/*.css'])
@@ -26,7 +24,6 @@ const buildCss = (cb) => {
     .pipe(cleanCSS({ compatibility: 'ie8' }))
     .pipe(dest('assets/css'))
 }
-
 
 //压缩、合并js文件
 const mainJs = (cb) => {
@@ -48,5 +45,3 @@ const auto = (cb) => {
 exports.build = series(buildLess, buildCss, mainJs)
 //开发环境构建
 exports.dev = auto
-
-
