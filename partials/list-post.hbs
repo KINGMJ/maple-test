@@ -1,0 +1,38 @@
+<div class="container-fluid list-post">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      {{#foreach posts}}
+      <article class="d-flex flex-row justify-content-between">
+        <div class="post-content">
+          <a href="{{url}}">{{title}}</a>
+          <p class="excerpt">{{excerpt characters="140"}}</p>
+          <div class="post-meta d-flex flex-row">
+            <p class="author">
+              <i class="fa fa-user"></i>
+              <a href="{{primary_author.url}}">{{primary_author.name}}</a>
+            </p>
+            <p class="time">
+              <i class="fa fa-clock-o"></i>
+              <time>{{date format="YYYY年MM月DD日"}}</time>
+            </p>
+            <p class="tag">
+              <i class="fa fa-tags"></i>
+              <a href="{{primary_tag.url}}">{{primary_tag.name}}</a>
+            </p>
+          </div>
+        </div>
+        <div class="post-cover">
+          <img src="{{feature_image}}" alt="">
+        </div>
+      </article>
+      {{/foreach}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      {{#if pagination}}
+      {{pagination}}
+      {{/if}}
+    </div>
+  </div>
+</div>
