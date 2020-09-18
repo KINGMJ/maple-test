@@ -1,0 +1,9 @@
+{{#get "posts" include="tags,authors" limit="3"}}
+    {{#foreach posts}}
+        <p>{{title}}</p>
+        <p>
+          <small>{{authors.[0].name}}</small>
+          <small>{{tags.[0].name}}</small>
+        </p>
+    {{/foreach}}
+{{/get}}
