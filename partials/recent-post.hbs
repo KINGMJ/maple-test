@@ -1,0 +1,8 @@
+<h4 class="footer-content-title">最新文章</h4>
+{{#get "posts" limit="3"}}
+    {{#foreach posts}}
+     <a href="{{url}}">
+       <p>{{title}}</p>
+     </a>
+    {{/foreach}}
+{{/get}}

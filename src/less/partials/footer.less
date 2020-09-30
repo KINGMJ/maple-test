@@ -1,5 +1,43 @@
+footer{
+  border-top: 1px solid  @border-color;
+  margin-top: 100px;
+  padding: 30px 0;
+  a{
+    color: @font-link-color;
+    &:hover{
+      color: @font-link-color;
+    }
+  }
+  .block{
+    width: 33.3%;
+    margin: 0 20px;
+  }
+}
+
 .copyright{
   text-align: center;
   color: @font-grey-color;
   font-size: 14px;
+}
+
+.footer-content-title {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.footer-content-tags {
+  text-align: left;
+  font-size: 14px;
+  a {
+    color:#999;
+    padding: 2px 10px;
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    border-radius: 2px;
+    border:1px solid #ddd;
+    &:hover {
+      color: @font-link-color;
+    }
+  }
 }
