@@ -36,9 +36,9 @@ const mainJs = (cb) => {
 
 //文件监听
 const auto = (cb) => {
-  watch('src/assets/less/**/*.less', series(buildLess, buildCss))
-  watch('src/assets/css/*.css', buildCss)
-  watch('src/assets/js/**/*.js', mainJs)
+  watch('src/less/**/*.less', series(buildLess, buildCss))
+  watch('src/css/*.css', buildCss)
+  watch('src/js/**/*.js', mainJs)
 }
 
 //生产环境构建
