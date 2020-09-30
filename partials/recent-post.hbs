@@ -1,9 +1,8 @@
-{{#get "posts" include="tags,authors" limit="3"}}
+<h4 class="footer-content-title">最新文章</h4>
+{{#get "posts" limit="3"}}
     {{#foreach posts}}
-        <p>{{title}}</p>
-        <p>
-          <small>{{authors.[0].name}}</small>
-          <small>{{tags.[0].name}}</small>
-        </p>
+     <a href="{{url}}">
+       <p>{{title}}</p>
+     </a>
     {{/foreach}}
 {{/get}}
