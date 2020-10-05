@@ -1,0 +1,22 @@
+.post-header {
+  background: no-repeat center center;
+  background-size: cover;
+  position: relative;
+  height: 30vh;
+  &:before {
+    .cover-mixin;
+    background: linear-gradient(to bottom, rgba(56, 56, 56, .75), rgba(56, 56, 56, .35) 100%);
+  }
+}
+
+.post-content{
+  padding: 16px;
+  h1 {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    word-wrap: break-word;
+    color: @font-link-color;
+  }
+}
