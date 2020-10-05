@@ -1,5 +1,15 @@
 {{!< default}}
 {{#post}}
-  <h1>{{title}}</h1>
-  <p>{{content}}</p>
+<header class="post-header" style="background-image: url({{feature_image}})"></header>
+<div class="post-content container">
+  <div class="row">
+    <div class="col-md-10">
+      <h1>{{title}}</h1>
+      {{> post-author}}
+      <article class="md-preview">
+        {{content}}
+      </article>
+    </div>
+  </div>
+</div>
 {{/post}}
